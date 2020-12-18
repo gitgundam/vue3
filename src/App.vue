@@ -1,16 +1,18 @@
 <template>
   <div>
-    <router-link to="/">点击1</router-link>
-    <router-link to="/router">点击2</router-link>
+    <Topnav></Topnav>
     <router-view></router-view>
   </div>
 
 </template>
 
-<script>
-
+<script lang="ts">
+import Topnav from './components/Topnav.vue';
 
 export default {
   name: 'App',
+  components:{
+    Topnav
+  }
 }
 </script>
