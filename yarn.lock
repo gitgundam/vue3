@@ -1437,6 +1437,11 @@ npm-run-path@^4.0.0:
   dependencies:
     path-key "^3.0.0"
 
+ometa@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.npm.taobao.org/ometa/download/ometa-0.2.2.tgz#f53c4735ba6d56af5a46b04dfb7c4334c596d44e"
+  integrity sha1-9TxHNbptVq9aRrBN+3xDNMWW1E4=
+
 on-finished@^2.3.0:
   version "2.3.0"
   resolved "https://registry.npm.taobao.org/on-finished/download/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -1801,6 +1806,13 @@ sass@^1.30.0:
   integrity sha1-YLu7r3a6EBF+YcbCTwAWHD1gYQ4=
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
+
+scss@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.npm.taobao.org/scss/download/scss-0.2.4.tgz#040d903ed37c5d4fa4ad33ae1fd389ac12a4e065"
+  integrity sha1-BA2QPtN8XU+krTOuH9OJrBKk4GU=
+  dependencies:
+    ometa "0.2.2"
 
 selfsigned@^1.10.8:
   version "1.10.8"
