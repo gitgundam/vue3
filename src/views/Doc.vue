@@ -1,6 +1,5 @@
 <template>
   <div class="doc">
-    <div class="content"></div>
     <aside v-if="menuVisible">
       <h2>组件列表</h2>
       <ol>
@@ -19,7 +18,7 @@
         </li>
       </ol>
     </aside>
-    <main>
+    <main >
       <router-view></router-view>
     </main>
   </div>
@@ -39,10 +38,25 @@ export default {
 
 <style scoped lang="scss">
 .doc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 60px;
   border: 1px solid red;
+  display: flex;
+  position: relative;
+  margin: 10px;
+  aside{
+    background: antiquewhite;
+  }
+  main{
+    background: #7e7d8e;
+    flex: 1;
+    height: 100vh;
+  }
+  @media (max-width: 500px)  {
+    aside{
+      position: fixed;
+      top: 42px;
+      left: 0;
+      bottom: 0;
+    }
+  }
 }
 </style>

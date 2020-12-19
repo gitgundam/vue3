@@ -104,7 +104,7 @@ $font-color: rgb(103 75 228);;
       height: 1.2rem;
       position: absolute;
       left: 22px;
-      top: 10px;
+      top: 12px;
     }
   }
   .menu{
