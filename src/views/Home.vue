@@ -27,8 +27,8 @@ $github-button-color: #e6d8fc;
 $button-font-color: white;
 
   .home{
-
     .banner{
+
       margin: 0 auto;
       padding: 100px 0 50px 0;
       display: flex;
@@ -43,7 +43,6 @@ $button-font-color: white;
         }
         color: $h1-color;
         font-size: 3rem;
-
       }
       > p.h2{
         @media (max-width: 500px)  {

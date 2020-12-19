@@ -1,38 +1,48 @@
 <template>
-  <div class="Doc">
-    <div class="topnav">
-      <div class="logo"></div>
-      <div class="menu"></div>
-    </div>
+  <div class="doc">
     <div class="content"></div>
-    <aside>
+    <aside v-if="menuVisible">
       <h2>组件列表</h2>
       <ol>
         <li></li>
         <li>
-          <router-link to="/doc/switch"></router-link>
+          <router-link to="/doc/switch">switch</router-link>
         </li>
         <li>
-          <router-link to="/doc/button"></router-link>
+          <router-link to="/doc/button">button</router-link>
         </li>
         <li>
-          <router-link to="/doc/dialog"></router-link>
+          <router-link to="/doc/dialog">dialog</router-link>
         </li>
         <li>
-          <router-link to="/doc/tabs"></router-link>
+          <router-link to="/doc/tabs">tabs</router-link>
         </li>
       </ol>
     </aside>
-    <main>主内容</main>
+    <main>
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
 <script lang="ts">
-  export default {
-    name: "Doc",
+import {inject, Ref} from 'vue';
+
+export default {
+  name: 'Doc',
+  setup() {
+    const menuVisible = inject<Ref<boolean>>('xxx');
+    return {menuVisible};
   }
+};
 </script>
 
 <style scoped lang="scss">
-
+.doc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  border: 1px solid red;
+}
 </style>
