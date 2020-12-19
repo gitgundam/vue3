@@ -12,7 +12,7 @@ import Topnav from './components/Topnav.vue';
 export default {
   name: 'App',
   components:{
-    Topnav
+    Topnav,
   }
 }
 </script>
