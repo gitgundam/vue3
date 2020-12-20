@@ -1,6 +1,8 @@
 <template>
-  <button @click="toggle"
-  :class="{checked: value}">
+  <button
+      class="h-switch"
+      @click="toggle"
+      :class="{'h-switch-checked': value}">
     <span></span>
   </button>
   {{value}}
@@ -29,7 +31,7 @@ export default {
 <style scoped lang="scss">
 $button-height: 24px;
 $pen-size: $button-height - 4px;
-button {
+.h-switch {
   height: $button-height;
   width: $button-height * 1.8;
   border: none;
@@ -48,7 +50,7 @@ button {
     transition: all 250ms;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 2px;
   }
-  &.checked{
+  &.h-switch-checked{
     background: #65c466;
     >span{
       left: calc(100% - #{$pen-size} - 2px);
