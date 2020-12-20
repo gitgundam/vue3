@@ -1,7 +1,6 @@
 <template>
-
   <div class="topnav" >
-    <div class="logo" @click="toHome">
+    <div class="logo" @click="toHome" >
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-gear"></use>
       </svg>
@@ -10,7 +9,7 @@
       </svg>
       <span>H ui </span>
     </div>
-    <div class="button" @click="toggleMenu">
+    <div class="button" @click="toggleMenu" v-if="menu">
       <svg class="icon" aria-hidden="true" >
         <use xlink:href="#icon-caidan"></use>
       </svg>
@@ -27,6 +26,11 @@
 import {inject,Ref} from 'vue'
   export default {
     name: "Topnav",
+    props:{menu:{
+        type: Boolean,
+        defaut: true,
+      }}
+      ,
     methods:{
       toHome(){
         this.$router.push('/')
@@ -50,7 +54,6 @@ $font-color: rgb(103 75 228);;
 .topnav{
   user-select:none;
   cursor: pointer;
-  position: relative;
   z-index: 10;
   display: flex;
   align-items: center;

@@ -5,6 +5,7 @@ import Switch from './components/Switch.vue'
 import Tabs from './components/Tabs.vue'
 import Button from './components/Button.vue'
 import Dialog from './components/Dialog.vue'
+import DocDemo from './components/DocDemo.vue'
 
 
 
@@ -14,7 +15,11 @@ export const router = createRouter({
     {path: '/', component: Home},
     {path: '/doc', component: Doc,
       children:[
-        {path:'switch',component: Switch}
+        {path:'',component: DocDemo},
+        {path:'switch',component: Switch},
+        {path:'Tabs',component: Tabs},
+        {path:'Button',component: Button},
+        {path:'Dialog',component: Dialog}
       ]}
   ]
 })

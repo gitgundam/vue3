@@ -1,6 +1,8 @@
 <template>
   <div class="home">
+    <Topnav class="nav"></Topnav>
     <div class="banner">
+      <header></header>
       <h1>氢 UI </h1>
       <p class="h2">一套基于Vue 3 的 UI 组件框架</p>
       <p class="actions">
@@ -12,8 +14,11 @@
 </template>
 
 <script lang="ts">
+import Topnav from '../components/Topnav.vue';
+
   export default {
     name: "Home",
+    components:{Topnav}
 
 }
 </script>
@@ -27,8 +32,13 @@ $github-button-color: #e6d8fc;
 $button-font-color: white;
 
   .home{
+    .nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
     .banner{
-
       margin: 0 auto;
       padding: 100px 0 50px 0;
       display: flex;
