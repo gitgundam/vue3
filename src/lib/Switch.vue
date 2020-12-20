@@ -5,7 +5,6 @@
       :class="{'h-switch-checked': value}">
     <span></span>
   </button>
-  {{value}}
 </template>
 
 <script lang="ts">
