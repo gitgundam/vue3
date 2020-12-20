@@ -1,15 +1,20 @@
 <template>
   <div class="switch-doc">
-    <Switch></Switch>
+    <Switch v-model:value="y" ></Switch>
   </div>
 </template>
 
 <script lang="ts">
   import Switch from '../lib/Switch.vue';
+  import {ref} from 'vue';
 
   export default {
     name: "SwitchDoc",
-    components:{Switch}
+    components:{Switch},
+    setup(){
+      const y = ref(false)
+      return {y}
+    }
 }
 </script>
 
