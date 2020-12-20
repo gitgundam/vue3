@@ -77,7 +77,6 @@ export default {
       flex-grow: 1;
       padding: 16px;
       overflow: auto;
-      background: bisque;
     }
   }
 }
