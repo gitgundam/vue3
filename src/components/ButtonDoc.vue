@@ -22,7 +22,7 @@
     </div>
     <h2>示例5</h2>
     <div><Button loading >大的按钮</Button>
-
+    </div>
     </div>
 </template>
 

@@ -139,6 +139,7 @@ $disabled-color: grey;
       color: $disabled-color;
       &:hover{
         background: transparent;
+        box-shadow: none;
       }
     }
     &.h-theme-link, &.h-theme-text , &.h-theme-button {
@@ -152,7 +153,6 @@ $disabled-color: grey;
             vertical-align: middle;
           }
         }
-
       }
     }
     & + & {
