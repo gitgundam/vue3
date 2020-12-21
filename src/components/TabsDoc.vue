@@ -1,10 +1,9 @@
 <template>
   <div class="Tabs">
+    33
     <Tabs>
       <Tab title="导航1">内容1</Tab>
       <Tab title="导航2">内容2</Tab>
-
-
     </Tabs>
   </div>
 </template>
@@ -14,7 +13,7 @@
   import Tab from '../lib/Tab.vue';
 
   export default {
-    name: "Tabs",
+    name: "TabsDoc",
     components:{Tabs,Tab}
 }
 </script>
