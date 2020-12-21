@@ -1,12 +1,15 @@
 <template>
-  <div class="Dialog">
-  2
+  <div class="dialog-doc">
+    <Dialog></Dialog>
   </div>
 </template>
 
 <script lang="ts">
+  import Dialog from '../lib/Dialog.vue';
+
   export default {
-    name: "Dialog",
+    name: "DialogDoc",
+    components:{Dialog}
 }
 </script>
 

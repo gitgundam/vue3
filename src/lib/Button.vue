@@ -159,7 +159,7 @@ $disabled-color: grey;
       margin-left: 8px;
     }
     &:hover {
-      background: $focus-color;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 2px;
     }
   }
   @keyframes loading {
