@@ -3,6 +3,7 @@
     <Topnav menu class="nav"></Topnav>
     <div class="content">
       <aside v-if="menuVisible">
+        <h2>文档</h2>
         <h2>组件列表</h2>
         <ol>
           <li></li>

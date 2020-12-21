@@ -31,6 +31,7 @@ export default {
 $button-height: 24px;
 $pen-size: $button-height - 4px;
 .h-switch {
+  cursor: pointer;
   height: $button-height;
   width: $button-height * 1.8;
   border: none;

@@ -1,12 +1,13 @@
 <template>
-  <div class="Tabs">
-  3
+  <div class="h-tabs">
+  
   </div>
 </template>
 
 <script lang="ts">
   export default {
     name: "Tabs",
+
 }
 </script>
 

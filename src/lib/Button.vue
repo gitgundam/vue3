@@ -62,6 +62,7 @@ $danger:#eb4d3d;
 $disabled-color: grey;
 
 .h-button{
+  user-select:none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -92,9 +93,6 @@ $disabled-color: grey;
   &.h-theme-link{
     color: $link-color;
     background: $background;
-    &:hover{
-      color:#1c4793;
-    }
     &.h-level-main{
       background: $main;
       color:  white;    }
