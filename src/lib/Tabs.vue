@@ -36,7 +36,6 @@
 
       watchEffect(()=>{
         if(navItems.value &&  indicator.value){
-          console.log(navItems.value);
           const {width} = navItems.value.getBoundingClientRect()
           indicator.value.style.width = width + 'px'
           const {left: left1} = container.value.getBoundingClientRect()

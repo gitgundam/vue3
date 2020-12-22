@@ -99,7 +99,7 @@ $button-font-color: white;
     }
     .banner{
       margin: 0 auto;
-      padding: 100px 0 50px 0;
+      padding: 150px 0 80px 0;
       display: flex;
       flex-direction: column;
       align-items: center;

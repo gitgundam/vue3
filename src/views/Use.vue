@@ -1,15 +1,15 @@
 <template>
-  <div class="use">
-    使用
-  </div>
+  <article class="markdown-body" v-html="md">
+  </article>
 </template>
 
-<script lang="ts">
+<script>
+import md from '../markdown/use.md'
 export default {
-  name: 'Use'
+  name: 'Use',
+  data(){
+    return {md}
+  }
 }
 </script>
 
-<style scoped lang="scss">
-
-</style>

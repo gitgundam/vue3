@@ -107,7 +107,7 @@ $disabled-color: grey;
   &.h-theme-text{
     color: #333;
     background: white;
-    border: none;
+    border:1px solid  transparent;
     &:hover{
       color: #333;
     }
@@ -156,6 +156,9 @@ $disabled-color: grey;
     }
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 2px;
+    }
+    &:active{
+      border:1px solid #2e7bfd;
     }
   }
   @keyframes loading {
