@@ -6,7 +6,7 @@
         <h2>文档</h2>
         <ol>
           <li>
-              <router-link to="/doc">介绍</router-link>
+              <router-link to="/doc/intro" >介绍</router-link>
           </li>
           <li>
             <router-link to="/doc/start">快速上手</router-link>
@@ -53,6 +53,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.router-link-active{
+  background: #ebe4fd;
+            border-right: 2px solid #6250dc;
+}
 .doc {
   display: flex;
   flex-direction: column;

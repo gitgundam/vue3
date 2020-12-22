@@ -17,7 +17,8 @@ export const router = createRouter({
     {path: '/', component: Home},
     {path: '/doc', component: Doc,
       children:[
-        {path:'',component: Intro},
+        {path:'',redirect: '/doc/intro'},
+        {path:'intro',component: Intro},
         {path:'start',component: Start},
         {path:'use',component: Use},
         {path:'switch',component: SwitchDoc},

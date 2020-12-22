@@ -79,6 +79,7 @@ $button-font-color: white;
         .intro{
           @media (max-width: 500px)  {
             flex-direction: column;
+            padding: 20px 0;
             display: flex;
             justify-content: center;
             align-items: center;

@@ -123,13 +123,11 @@ $disabled-color: grey;
   }
   &.h-size-big{
     font-size: 20px;
-    height: 38px;
-    padding: 1em  1em;
+    padding: 0.3em  1em;
   }
   &.h-size-small{
     font-size: 13px;
-    height: 20px;
-    padding: 1em  1.2em;
+    padding: 0.3em  1.2em;
   }
   &.h-theme-link, &.h-theme-text , &.h-theme-button {
     &[disabled] {
