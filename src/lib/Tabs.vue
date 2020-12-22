@@ -2,7 +2,7 @@
   <div class="h-tabs">
     <div class="h-tabs-nav" ref="container">
       <div v-for="(t,index) in titles"
-           :ref="el => { if (el) navItems[index] = el }"
+           :ref="el => { if (t === selected) navItems = el }"
            @click="switchTab(t)"
            :key="index"
            class="h-tabs-nav-item"
@@ -20,7 +20,7 @@
 
 <script lang="ts">
   import Tab from './Tab.vue';
-  import {ref,onMounted,onUpdated} from 'vue'
+  import {ref,watchEffect} from 'vue'
 
   export default {
     name: "Tabs",
@@ -30,33 +30,22 @@
       }
     },
     setup(props,context) {
-      const navItems = ref<HTMLDivElement[]>([])
+      const navItems = ref<HTMLDivElement>(null)
       const indicator =ref<HTMLDivElement>(null)
       const container = ref<HTMLDivElement>(null)
 
-      onMounted(()=>{
-        const divs =navItems.value
-        const result = divs.filter(div=>div.classList.contains('selected'))[0]
-        const {width} = result.getBoundingClientRect()
-        indicator.value.style.width = width + 'px'
-        const {left: left1} = container.value.getBoundingClientRect()
-        const {left: left2} = result.getBoundingClientRect()
-        const left = left1 - left2
-        indicator.value.style.left = -left + 'px'
+      watchEffect(()=>{
+        if(navItems.value &&  indicator.value){
+          console.log(navItems.value);
+          const {width} = navItems.value.getBoundingClientRect()
+          indicator.value.style.width = width + 'px'
+          const {left: left1} = container.value.getBoundingClientRect()
+          const {left: left2} = navItems.value.getBoundingClientRect()
+          const left = left1 - left2
+          indicator.value.style.left = -left + 'px'
+        }
 
       })
-      onUpdated(()=>{
-        const divs =navItems.value
-        const result = divs.filter(div=>div.classList.contains('selected'))[0]
-        const {width} = result.getBoundingClientRect()
-        indicator.value.style.width = width + 'px'
-        const {left: left1} = container.value.getBoundingClientRect()
-        const {left: left2} = result.getBoundingClientRect()
-        const left = left1 - left2
-        indicator.value.style.left = -left + 'px'
-
-      })
-
 
       const defaults = context.slots.default()
       defaults.forEach((tag) => {

@@ -1,6 +1,5 @@
 <template>
-  <div class="Tabs">
-    33
+  <div class="tabs">
     <Tabs v-model:selected="originTab">
       <Tab title="导航1">内容1</Tab>
       <Tab title="导航222">内容22</Tab>
@@ -27,5 +26,7 @@
 </script>
 
 <style scoped lang="scss">
+.tabs{
 
+}
 </style>

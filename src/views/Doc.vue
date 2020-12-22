@@ -2,22 +2,32 @@
   <div class="doc">
     <Topnav menu class="nav"></Topnav>
     <div class="content">
-      <aside v-if="menuVisible">
+      <aside :class="{active: menuVisible}">
         <h2>文档</h2>
+        <ol>
+          <li>
+              <router-link to="/doc">介绍</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/start">快速上手</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/use">使用</router-link>
+          </li>
+        </ol>
         <h2>组件列表</h2>
         <ol>
-          <li></li>
           <li>
-            <router-link to="/doc/switch">switch</router-link>
+            <router-link to="/doc/switch">switch组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">button</router-link>
+            <router-link to="/doc/button">button组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">dialog</router-link>
+            <router-link to="/doc/dialog">dialog组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">tabs</router-link>
+            <router-link to="/doc/tabs">tabs组件</router-link>
           </li>
         </ol>
       </aside>
@@ -69,11 +79,35 @@ export default {
       top: 52px;
       left: 0;
       bottom: 0;
+      border-right: 1px solid #e8e8e8;
       width: 150px;
       background: white;
+      z-index: 100;
+      transition: all 250ms;
       @media (max-width: 500px) {
       top: 42px;
+        transform: translateX(-150px);
     }
+      &.active{
+        transform: translateX(0)
+      }
+      h2{
+        padding: 8px;
+      }
+      li{
+        >a{
+          color: #333333;
+          padding: 10px 0 10px 20px;
+          display: inline-block;
+          width: 150px;
+          font-size: 14px;
+          &:hover{
+            background: #ebe4fd;
+            border-right: 2px solid #6250dc;
+          }
+        }
+
+      }
     }
     > main {
       flex-grow: 1;

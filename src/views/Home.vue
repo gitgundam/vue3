@@ -2,13 +2,41 @@
   <div class="home">
     <Topnav class="nav"></Topnav>
     <div class="banner">
-      <header></header>
       <h1>氢 UI </h1>
       <p class="h2">一套基于Vue 3 的 UI 组件框架</p>
       <p class="actions">
         <a href="https://github.com/gitgundam" class="github">Github</a>
         <router-link to="/doc">开始</router-link>
       </p>
+    </div>
+    <div class="main">
+      <div class="item">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-vue"></use>
+        </svg>
+        <div class="intro">
+          <h2>基于Vue3</h2>
+          <p>使用了Vue3 Composition API</p>
+        </div>
+      </div>
+      <div class="item">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-ts"></use>
+        </svg>
+        <div class="intro">
+          <h2>基于Typescript</h2>
+          <p>源代码采用Typescript书写（非常严格）</p>
+        </div>
+      </div>
+      <div class="item">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-tip"></use>
+        </svg>
+        <div class="intro">
+          <h2>代码易读</h2>
+          <p>每个组件的源代码都极其简洁</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +60,36 @@ $github-button-color: #e6d8fc;
 $button-font-color: white;
 
   .home{
+    .main{
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 500px)  {
+        flex-direction: column;
+      }
+      .item{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 500px)  {
+          flex-direction: column;
+        }
+        .intro{
+          @media (max-width: 500px)  {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      .icon{
+        width: 100px;
+        height: 100px;
+      }
+    }
     .nav{
       position: fixed;
       top: 0;
