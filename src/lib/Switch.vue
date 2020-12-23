@@ -19,13 +19,8 @@ export default {
   },
   setup(props,context){
     const  checked = ref(false)
-    let x = setInterval(()=>{
-      context.emit('update:value',!props.value)
-    },1000)
+
     const toggle =()=>{
-      if(x){
-        clearInterval(x)
-      }
       context.emit('update:value',!props.value)
     }
     return {checked,toggle}
