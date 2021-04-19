@@ -28,6 +28,7 @@ export default {
     // }
     const toggle =()=>{
       context.emit('update:value',!props.value)
+      context.emit('update:clean',1)
     }
     return {checked,toggle}
   }

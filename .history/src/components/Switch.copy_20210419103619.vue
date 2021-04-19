@@ -14,15 +14,14 @@ export default {
   setup() {
     const bool = ref(true);
     const clean=()=>{
-      if(x){
-        clearInterval(x)
-      }
+      if(x){}
     }
     let x = setInterval(() => {
       bool.value = !bool.value;
+      console.log(cleanNumber);
     }, 1000);
 
-    return { bool , clean};
+    return { bool };
   },
 };
 </script>

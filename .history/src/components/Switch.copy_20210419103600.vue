@@ -2,7 +2,7 @@
 干
 </demo>
 <template>
-  <Switch v-model:value="bool" @click="clean"></Switch>
+  <Switch v-model:value="bool" @click="clae"></Switch>
 </template>
 
 <script lang='ts'>
@@ -13,16 +13,13 @@ export default {
   components: { Switch },
   setup() {
     const bool = ref(true);
-    const clean=()=>{
-      if(x){
-        clearInterval(x)
-      }
-    }
+    const cleanNumber = 0;
     let x = setInterval(() => {
       bool.value = !bool.value;
+      console.log(cleanNumber);
     }, 1000);
 
-    return { bool , clean};
+    return { bool };
   },
 };
 </script>

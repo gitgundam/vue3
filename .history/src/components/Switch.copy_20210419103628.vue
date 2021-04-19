@@ -22,7 +22,7 @@ export default {
       bool.value = !bool.value;
     }, 1000);
 
-    return { bool , clean};
+    return { bool };
   },
 };
 </script>

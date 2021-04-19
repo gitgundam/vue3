@@ -19,6 +19,7 @@ export default {
   },
   setup(props,context){
     const  checked = ref(false)
+    const clean
     // const isInterval = (x)=>{
     //   if(x){
     //     clearInterval(x)
@@ -28,6 +29,7 @@ export default {
     // }
     const toggle =()=>{
       context.emit('update:value',!props.value)
+      context.emit('update:clean',0.1)
     }
     return {checked,toggle}
   }
