@@ -18,7 +18,7 @@ export default {
         clearInterval(x)
       }
     }
-    //设置定时器
+    //sh
     let x = setInterval(() => {
       bool.value = !bool.value;
     }, 1000);
